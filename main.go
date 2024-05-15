@@ -167,7 +167,7 @@ func worker(start int, step int, res MiningInfoResult) {
 				map[string]interface{}{
 					"block_content": hex.EncodeToString(_hex),
 					"txs":           txs,
-					"id":            lastBlock.Id + 1,
+					"block_no":            lastBlock.Id + 1,
 				},
 			)
 			_ = json.Unmarshal(req.Body(), &reqP)
